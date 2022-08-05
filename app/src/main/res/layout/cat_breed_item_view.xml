@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_20_dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/recipe_iv"
+        android:layout_width="@dimen/dimen_100_dp"
+        android:layout_height="@dimen/dimen_100_dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.example.catcraft.customviews.AppTextView
+        android:id="@+id/recipe_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/breed_name"
+        android:textSize="@dimen/dimen_20_sp"
+        app:layout_constraintBottom_toBottomOf="@id/recipe_iv"
+        app:layout_constraintStart_toEndOf="@id/recipe_iv"
+        app:textStyle="@integer/semi_bold"
+        />
+
+    <com.example.catcraft.customviews.AppTextView
+        android:id="@+id/life_span_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/breed_name"
+        android:textSize="@dimen/dimen_20_sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recipe_name_tv"
+        app:textStyle="@integer/regular"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
